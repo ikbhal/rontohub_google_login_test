@@ -4,9 +4,21 @@ const session = require('express-session');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const sqlite3 = require('sqlite3').verbose();
+const cors = require('cors'); // Add this line
 
 const app = express();
 const port = process.env.PORT || 3029;
+
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+
+// Use CORS middleware
+app.use(cors());
+
+// Serve the index.ejs template for the home page
+app.get('/', (req, res) => {
+    res.render('index');
+});
 
 // Setup SQLite3 database
 // const db = new sqlite3.Database(':memory:');

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <p>Current Counter Value: <span id="counterValue">Loading...</span></p>
+
+    <button id="increaseBtn">+</button>
+    <button id="decreaseBtn">-</button>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+        $(document).ready(function() {
+            // Function to update the counter value on the page
+            function updateCounterValue() {
+                $.get('/counter', function(data) {
+                    $('#counterValue').text(data);
+                });
+            }
+
+            // Update counter value on page load
+            updateCounterValue();
+
+            // Button click handlers
+            $('#increaseBtn').click(function() {
+                $.post('/counter/increase', function() {
+                    updateCounterValue();
+                });
+            });
+
+            $('#decreaseBtn').click(function() {
+                $.post('/counter/decrease', function() {
+                    updateCounterValue();
+                });
+            });
+
+            $('#resetBtn').click(function() {
+                $.post('/counter/reset', function() {
+                    updateCounterValue();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
