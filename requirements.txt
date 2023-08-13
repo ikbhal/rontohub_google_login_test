@@ -1,0 +1,12 @@
+
+Main 
+sso 
+google 
+signup
+sign
+---
+counter 
++ -> increase
+- -> decrease
+reset -> zero 
+---

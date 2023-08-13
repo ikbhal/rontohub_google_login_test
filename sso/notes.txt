@@ -1,0 +1,39 @@
+App name
+rontohub
+
+application home page: 
+    https://rontohub.com
+
+Privacy page 
+https://rontohub.com/privacy.html
+
+terms page 
+https://rontohub.com/terms.html
+
+authorized domain
+rontohub.com
+
+developer contact information 
+contact@rontohub.com 
+
+
+
+callbackURL: 
+https://rontohub.com/auth/google/callback
+
+---
+OAuth client created
+The client ID and secret can always be accessed from Credentials in APIs & Services
+
+OAuth access is restricted to users within your organization unless the OAuth consent screen is published and verified
+
+
+
+Client ID
+275781557350-6nntan81eco5k57i3g2cq7a5m6n40nme.apps.googleusercontent.com
+
+Client secret
+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
+
+Creation date
+August 13, 2023 at 8:18:52 PM GMT+5
